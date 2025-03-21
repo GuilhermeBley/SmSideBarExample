@@ -8,6 +8,8 @@ public record SideBarItem(
 public partial class SideBarComponent : ComponentBase
 {
     private int? _currentActiveIndex;
+    int? CurrentActiveIndex => _currentActiveIndex;
+
     [Parameter]
     public IReadOnlyList<SideBarItem> Items { get; set; } = [];
 
